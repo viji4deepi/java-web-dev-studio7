@@ -33,4 +33,24 @@ public abstract class BaseDisc {
 
     }
 
-    public String r
+    public String readData () {
+        return this.discData;
+    }
+
+    //public HashMap<String, String> getInfo() {return this.discInfo;
+    //}
+
+    public HashMap<String, String> getInfo() {
+        HashMap<String, String> returnMap = new HashMap<>();
+        returnMap.put("Name", this.name);
+        returnMap.put("Capacity", String.valueOf(this.storageCapacityInMB));
+        returnMap.put("Contents", this.contents);
+        returnMap.put("Disc Type", this.discType);
+//        return "Name : " + this.name + "\nCapacity: " + this.storageCapacityInMB + "\nContents: " + this.contents + "\nDisc Type : " + this.discType;
+        return returnMap;
+    }
+
+    public void insert() {
+        this.isInserted = true;
+    }
+}
