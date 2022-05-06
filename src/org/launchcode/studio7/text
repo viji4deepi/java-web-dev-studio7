@@ -1,0 +1,32 @@
+public abstract class BaseDisc {
+
+    //Data gets written to the discs by using a laser,
+    abstract void dataWritten(String data);
+
+   // The data on the discs can be read by using a laser,
+    abstract void dataRead();
+
+    //Once loaded, they both report information like name, capacity, contents, and disc type
+    abstract HashMap<String, String> getInfo();
+
+    abstract void insert();
+
+
+}
+
+
+----------------
+
+public interface OpticalDisc {
+
+    void spinDisc();
+
+    void storeDate(String data);
+
+     void storageCapacity();
+     //boolean isStorageCapacity();
+
+}
+
+--------------------------
+
